@@ -70,7 +70,7 @@ jobs:
            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
            aws-region: us-east-1  
     - name: Update kubeconfig  
-      run: aws eks update-kubeconfig --region us-east-1 --name first-cluster
+      run: aws eks update-kubeconfig --region us-east-1 --name landmark-eks
 
         #version: v1
 
