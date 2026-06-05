@@ -55,7 +55,7 @@ jobs:
         context: .
         push: true
         tags: aytechy/landmark_nodejs:v1 
-  deploy to kubernetes:
+  deploy-to-kubernetes:
     runs-on: ubuntu-latest
     needs: containerize
 
@@ -70,11 +70,9 @@ jobs:
            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
            aws-region: us-east-1  
     - name: Update kubeconfig  
-      run: aws eks update-kubeconfig --region us-east-1 --name landmark-eks
+      run: aws eks update-kubeconfig --region us-east-1 --name first-cluster
 
-
-
-        version: v1
+        #version: v1
 
     - name: Deploy to Kubernetes
       run: 
