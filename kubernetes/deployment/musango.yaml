@@ -30,7 +30,7 @@ metadata:
   name: musango
   namespace: staging
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: musango
   ports:
