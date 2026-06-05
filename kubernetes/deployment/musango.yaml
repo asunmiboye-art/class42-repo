@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: musango
+  namespace: staging
 spec:
   replicas: 1
   selector:
@@ -27,8 +28,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: musango
+  namespace: staging
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: musango
   ports:
